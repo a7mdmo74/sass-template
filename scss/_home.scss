@@ -1,0 +1,69 @@
+.home {
+  height: 100vh;
+  background-image: $home_bg;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-title {
+    @extend %title;
+  }
+  &-line {
+    @extend %line;
+    background-color: $main-color;
+  }
+  &-paragraph {
+    @extend %paragraph;
+  }
+  &-btn {
+    background: $main-color;
+    color: #fff;
+
+    @extend %button;
+    @include transition-ease;
+    &:hover {
+      background: #fff;
+      color: $main-color;
+    }
+  }
+}
+
+.need {
+  background-color: $main-color;
+  padding: 5rem 0;
+  text-align: center;
+
+  &-container {
+    width: 60%;
+    margin: auto;
+  }
+
+  &-title {
+    @extend %title;
+  }
+  &-line {
+    @extend %line;
+    background-color: #fff;
+  }
+  &-paragraph {
+    @extend %paragraph;
+    color: #fff;
+  }
+  &-btn {
+    background: #fff;
+    color: $secondary-color;
+
+    @extend %button;
+    border: 2px solid #fff;
+    @include transition-ease;
+    &:hover {
+      background: $secondary-color;
+      color: #fff;
+    }
+  }
+}

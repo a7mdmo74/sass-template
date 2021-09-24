@@ -1,0 +1,50 @@
+@include media-md {
+  // Nav
+  .nav .container .logo h2 a {
+    font-size: 5vw !important;
+  }
+  .nav-menu {
+    display: block !important;
+  }
+  .list-group {
+    position: fixed;
+    width: 100% !important;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: $secondary-color;
+    @include flex-center(column);
+    @include transition-ease;
+
+    transform: translateX(-100%);
+
+    &-item {
+      margin: 2rem 0 !important;
+    }
+  }
+
+  // home
+  .home-title,
+  .need-title,
+  .services-title {
+    font-size: 1.5rem;
+  }
+  .home-paragraph,
+  .need-paragraph,
+  .services-paragraph {
+    font-size: 0.8rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-3 {
+    width: 100% !important;
+  }
+}
+
+@include media-sm {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

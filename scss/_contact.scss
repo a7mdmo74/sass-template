@@ -1,0 +1,21 @@
+.contact {
+  text-align: center;
+  padding: 5rem 0;
+  &-title {
+    @extend %title;
+    color: #333;
+  }
+  &-line {
+    @extend %line;
+    background-color: $main-color;
+  }
+  &-paragraph {
+    line-height: 1.2;
+    font-size: 1rem;
+  }
+}
+
+.icons .tele {
+  display: inline-block;
+  margin: 1rem;
+}

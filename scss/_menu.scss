@@ -1,0 +1,100 @@
+.nav {
+  background: $secondary-color;
+  height: 8vh;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+
+  .container {
+    @include flex-center(row);
+    justify-content: space-between;
+
+    .logo {
+      width: 50%;
+      display: inline;
+      h2 {
+        padding: 10px 0;
+        a {
+          color: #c9c5bd;
+          font-size: 2rem;
+        }
+      }
+    }
+    .list-group {
+      display: flex;
+      list-style: none;
+      padding: 10px 0;
+      width: 50%;
+
+      &-item {
+        margin: 10px 0.8rem;
+      }
+      &-link {
+        color: #c9c5bd;
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include transition-ease;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  &-menu {
+    position: fixed;
+    z-index: 10;
+    right: 1rem;
+    top: 1.2rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: none;
+
+    @include transition-ease;
+
+    .burger {
+      position: absolute;
+      right: 1rem;
+      top: 0.4rem;
+      width: 30px;
+      height: 3px;
+      background-color: $main-color;
+
+      @include transition-ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -9px;
+        right: 0;
+        width: 30px;
+        height: 3px;
+        background: $main-color;
+        @include transition-ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -9px;
+        right: 0;
+        width: 20px;
+        height: 3px;
+        background: $main-color;
+        @include transition-ease;
+      }
+    }
+    &:hover .burger::after {
+      width: 30px;
+    }
+  }
+}
+
+.toggle-nav {
+  transform: translateX(0) !important;
+}
